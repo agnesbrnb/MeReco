@@ -1,0 +1,28 @@
+## conda environments names  
+bakta_env: "snakemake-envs/bakta-1.11.3.yml"
+prokka_env: "snakemake-envs/prokka-1.14.6.yml"
+eggnog_env: "snakemake-envs/eggnog-2.1.13.yml"
+emapper2gbk_env: "snakemake-envs/emapper2gbk-0.3.2.yml"
+metage2metabo_env: "snakemake-envs/mpwt-padmet.yml"
+
+## pathes to databases 
+bak_db: "/db/outils/bakta-1.11.0/db/"
+egg_db: "/db/outils/eggnog-mapper-2.1.12/"
+metacyc_ref: "/home/nerobert/work/pathway-tools/aic-export/pgdbs/biocyc/metacyc/29.0/padmet/metacyc_29.0.padmet"
+
+## pathes to files 
+genomes_dir: "/home/nerobert/save/becycle_genomes/Contig"
+taxfile: "/home/nerobert/save/becycle_genomes/taxons_Contig.tsv"
+output_dir: "./"
+
+## Eggnog option to put DB in memory : 
+eggnog_db_optim: ""
+eggnog_db_optim_path: "" # if eggnog_db_optim is yes and you don't want the default path (need to start with /dev/shm)
+
+## parameters
+annotools: ["prokka", "bakta", "eggnog"]
+to_remove: {
+  "prokka" : [".err", ".faa", ".ffn", ".fna", ".fsa", ".gff", ".sqn", ".tbl", ".tsv", ".txt"],
+  "bakta" : [".lisp", ".embl", ".ffn", ".fna", ".gff3", ".tsv", ".json", ".png", ".svg", ".txt", ".dat"]
+  }
+
